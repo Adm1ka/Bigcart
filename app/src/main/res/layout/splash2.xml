@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/banner2"
+        android:layout_width="1188dp"
+        android:layout_height="986dp"
+        android:layout_x="-397dp"
+        android:layout_y="-42dp"
+        android:src="@drawable/splash2" />
+
+    <TextView
+        android:layout_width="215dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:layout_marginRight="185dp"
+        android:layout_x="108dp"
+        android:layout_y="68dp"
+        android:text="Buy Premium Quality Fruits"
+        android:textColor="#000000"
+        android:textSize="35dp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/nameapp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="139dp"
+        android:layout_y="157dp"
+        android:src="@drawable/bigcart_1" />
+
+    <Button
+        android:id="@+id/get_started"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="645dp"
+        android:layout_x="91dp"
+        android:layout_y="811dp"
+        android:background="@drawable/gradient"
+        android:text="Get started"
+        app:backgroundTint="@null" />
+    <Button
+        android:id="@+id/back1"
+        android:layout_width="75dp"
+        android:layout_height="match_parent"
+        android:layout_x="-2dp"
+        android:layout_y="-1dp"
+        android:background="@color/transparent_white"
+        android:clickable="true" />
+    <Button
+        android:id="@+id/next1"
+        android:layout_width="75dp"
+        android:layout_height="match_parent"
+        android:layout_x="341dp"
+        android:layout_y="0dp"
+        android:background="@color/transparent_white"
+        android:clickable="true" />
+    <LinearLayout
+        android:layout_width="50dp"
+        android:layout_height="10dp"
+        android:layout_x="193dp"
+        android:layout_y="794dp">
+        <Button
+            android:id="@+id/point1"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_x="260dp"
+            android:layout_y="783dp"
+            android:background="@drawable/pointer"
+            app:backgroundTint="@null" />
+        <Button
+            android:id="@+id/point2"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_x="260dp"
+            android:layout_y="783dp"
+            android:background="@drawable/pointer_select"
+            app:backgroundTint="@null" />
+
+        <Button
+            android:id="@+id/point3"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_x="260dp"
+            android:layout_y="783dp"
+            android:background="@drawable/pointer"
+            app:backgroundTint="@null" />
+    </LinearLayout>
+</AbsoluteLayout>
