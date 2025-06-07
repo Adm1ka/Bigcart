@@ -24,7 +24,6 @@ public class Auth1_login extends AppCompatActivity{
     public ImageView backarr;
     public TextView signup;
     public EditText password;
-
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {

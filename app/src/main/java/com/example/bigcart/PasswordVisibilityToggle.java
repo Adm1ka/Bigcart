@@ -12,13 +12,11 @@ public class PasswordVisibilityToggle implements View.OnTouchListener {
     private Drawable eye;
     private Drawable eyehide;
     private boolean passwordVisible = false;
-
     public PasswordVisibilityToggle(EditText password, Drawable eyeDrawable, Drawable eyeSlashDrawable) {
         this.password = password;
         this.eye = eyeDrawable;
         this.eyehide = eyeSlashDrawable;
     }
-
     @SuppressLint("ClickableViewAccessibility")
     @Override
     public boolean onTouch(View v, MotionEvent event) {

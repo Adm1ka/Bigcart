@@ -18,7 +18,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class Auth1_create extends AppCompatActivity{
-
     public ImageView backarr;
     public Button signup;
     public TextView log;
