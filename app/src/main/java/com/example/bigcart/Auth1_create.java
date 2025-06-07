@@ -49,6 +49,5 @@ public class Auth1_create extends AppCompatActivity{
             }
         });
         log.setOnClickListener(v -> startActivity(new Intent(this, Auth1_login.class)));
-
     }
 }
