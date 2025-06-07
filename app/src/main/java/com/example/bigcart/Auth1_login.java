@@ -24,6 +24,7 @@ public class Auth1_login extends AppCompatActivity{
     public ImageView backarr;
     public TextView signup;
     public EditText password;
+    public Button login;
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +39,7 @@ public class Auth1_login extends AppCompatActivity{
         backarr = findViewById(R.id.backarr);
         signup=findViewById(R.id.signup);
         password = findViewById(R.id.password);
+        login = findViewById(R.id.log);
         Drawable eye = ContextCompat.getDrawable(this, R.drawable.eye);
         Drawable eyehide = ContextCompat.getDrawable(this, R.drawable.eyehide);
         PasswordVisibilityToggle passwordVisibilityToggle = new PasswordVisibilityToggle(password, eye, eyehide);
@@ -49,5 +51,6 @@ public class Auth1_login extends AppCompatActivity{
             }
         });
         signup.setOnClickListener(v -> startActivity(new Intent(this, Auth1_create.class)));
+        login.setOnClickListener(v -> startActivity(new Intent(this, Home.class)));
     }
 }
