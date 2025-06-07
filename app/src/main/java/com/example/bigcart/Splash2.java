@@ -13,7 +13,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class Splash2 extends AppCompatActivity {
-    public Button next1, back1, point1, point3;
+    public Button next1, back1, point1, point3, get_started;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -29,9 +29,11 @@ public class Splash2 extends AppCompatActivity {
         back1 = findViewById(R.id.back1);
         point1 = findViewById(R.id.point1);
         point3 = findViewById(R.id.point3);
+        get_started = findViewById(R.id.get_started);
         next1.setOnClickListener(v -> startActivity(new Intent(this, Splash3.class)));
         back1.setOnClickListener(v -> startActivity(new Intent(this, Splash1.class)));
         point1.setOnClickListener(v -> startActivity(new Intent(this, Splash1.class)));
         point3.setOnClickListener(v -> startActivity(new Intent(this, Splash3.class)));
+        get_started.setOnClickListener(v -> startActivity(new Intent(this, Auth1_welcome.class)));
     }
 }

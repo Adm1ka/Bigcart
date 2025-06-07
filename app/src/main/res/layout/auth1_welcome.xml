@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/banner1"
+        android:layout_width="511dp"
+        android:layout_height="753dp"
+        android:layout_x="-62dp"
+        android:layout_y="-37dp"
+        android:src="@drawable/fem1"/>
+
+    <ImageView
+        android:id="@+id/banner2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="0dp"
+        android:layout_y="531dp"
+        android:src="@drawable/rectangle_39" />
+
+    <ImageView
+        android:id="@+id/backarr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="8dp"
+        android:layout_y="26dp"
+        android:clickable="true"
+        android:src="@drawable/back" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="175dp"
+        android:layout_y="23dp"
+        android:gravity="center"
+        android:text="Welcome"
+        android:textColor="@color/white"
+        android:textSize="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="28dp"
+        android:layout_y="595dp"
+        android:text="Welcome"
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="362dp"
+        android:layout_height="wrap_content"
+        android:layout_x="28dp"
+        android:layout_y="654dp"
+        android:text="Welcome to our shopping app! Create an account to access all the features and start making profitable purchases."
+        android:textColor="@color/grey"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="103dp"
+        android:layout_y="822dp"
+        android:text="Already have an account ?" />
+
+    <TextView
+        android:id="@+id/log"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="268dp"
+        android:layout_y="822dp"
+        android:textStyle="bold"
+        android:clickable="true"
+        android:text="Login" />
+
+    <Button
+        android:id="@+id/create"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_x="83dp"
+        android:layout_y="757dp"
+        android:background="@drawable/gradient"
+        android:drawableLeft="@drawable/user"
+        android:text="Create an account"
+        android:clickable="true"
+        app:backgroundTint="@null" />
+</AbsoluteLayout>

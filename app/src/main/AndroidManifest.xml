@@ -30,5 +30,14 @@
         <activity android:name=".Splash3"
             android:exported="true">
         </activity>
+        <activity android:name=".Auth1_welcome"
+            android:exported="true">
+        </activity>
+        <activity android:name=".Auth1_login"
+            android:exported="true">
+        </activity>
+        <activity android:name=".Auth1_create"
+            android:exported="true">
+        </activity>
     </application>
 </manifest>

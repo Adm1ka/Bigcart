@@ -10,28 +10,33 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import android.content.Intent;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
 
-public class Splash1 extends AppCompatActivity {
-    public Button next1, point2, point3, get_started;
+public class Auth1_welcome extends AppCompatActivity{
 
+public  Button create;
+public TextView log;
+public ImageView backarr;
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.splash1);
+        setContentView(R.layout.auth1_welcome);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.banner1), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        next1 = findViewById(R.id.next1);
-        point2 = findViewById(R.id.point2);
-        point3 = findViewById(R.id.point3);
-        get_started = findViewById(R.id.get_started);
-        next1.setOnClickListener(v -> startActivity(new Intent(this, Splash2.class)));
-        point2.setOnClickListener(v -> startActivity(new Intent(this, Splash2.class)));
-        point3.setOnClickListener(v -> startActivity(new Intent(this, Splash3.class)));
-        get_started.setOnClickListener(v -> startActivity(new Intent(this, Auth1_welcome.class)));
+        create = findViewById(R.id.create);
+        log = findViewById(R.id.log);
+        backarr = findViewById(R.id.backarr);
+        backarr.setOnClickListener(v -> startActivity(new Intent(this, Splash1.class)));
+        log.setOnClickListener(v -> startActivity(new Intent(this, Auth1_login.class)));
+        create.setOnClickListener(v -> startActivity(new Intent(this, Auth1_create.class)));
     }
+
 }
+
+

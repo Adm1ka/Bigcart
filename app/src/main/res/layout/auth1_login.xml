@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/banner1"
+        android:layout_width="457dp"
+        android:layout_height="693dp"
+        android:layout_x="-3dp"
+        android:layout_y="-91dp"
+        android:src="@drawable/fem2" />
+
+    <ImageView
+        android:id="@+id/banner2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="0dp"
+        android:layout_y="531dp"
+        android:src="@drawable/rectangle_39" />
+
+    <ImageView
+        android:id="@+id/backarr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="8dp"
+        android:layout_y="26dp"
+        android:clickable="true"
+        android:src="@drawable/back" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="175dp"
+        android:layout_y="23dp"
+        android:gravity="center"
+        android:text="Welcome"
+        android:textColor="@color/white"
+        android:textSize="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="10dp"
+        android:layout_y="543dp"
+        android:text="Welcome back!"
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="205dp"
+        android:layout_height="wrap_content"
+        android:layout_x="11dp"
+        android:layout_y="583dp"
+        android:text="Sign in to your account"
+        android:textColor="@color/grey"
+        android:textSize="15dp" />
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:layout_x="29dp"
+        android:layout_y="643dp"
+        android:background="@drawable/edit"
+        android:drawableLeft="@drawable/email"
+        android:hint=" Email Address"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:layout_x="29dp"
+        android:layout_y="694dp"
+        android:background="@drawable/edit"
+        android:drawableLeft="@drawable/lock"
+        android:drawableRight="@drawable/eye"
+        android:hint=" Password"
+        android:inputType="textPassword" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/remember"
+        android:layout_width="39dp"
+        android:layout_height="29dp"
+        android:layout_x="29dp"
+        android:layout_y="743dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="68dp"
+        android:layout_y="748dp"
+        android:text="Remember me"
+        android:textColor="@color/grey"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/forgot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="274dp"
+        android:layout_y="749dp"
+        android:text="Forgot password"
+        android:textColor="@color/blue"
+        android:textSize="15dp"
+        android:clickable="true"/>
+
+    <TextView
+        android:id="@+id/question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="100dp"
+        android:layout_y="847dp"
+        android:text="Don’t have an account ?" />
+
+    <TextView
+        android:id="@+id/signup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="251dp"
+        android:layout_y="846dp"
+        android:clickable="true"
+        android:text="Sign up"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/log"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_x="88dp"
+        android:layout_y="795dp"
+        android:background="@drawable/gradient"
+        android:clickable="true"
+        android:text="Login"
+        app:backgroundTint="@null" />
+</AbsoluteLayout>

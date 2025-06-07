@@ -2,5 +2,11 @@
 <resources>
     <color name="transparent_gray">#80000000</color>
     <color name="transparent_white">#0000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="green">#AEDC81</color>
     <color name="dark_green">#6CC51D</color>
+    <color name="light_green">#EBFFD7</color>
+    <color name="grey">#868889</color>
+    <color name="blue">#407EC7</color>
 </resources>

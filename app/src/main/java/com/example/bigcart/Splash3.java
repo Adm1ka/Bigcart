@@ -11,7 +11,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class Splash3 extends AppCompatActivity {
-    public Button back1, point1, point2;
+    public Button back1, point1, point2, get_started;
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,8 +25,10 @@ public class Splash3 extends AppCompatActivity {
         back1 = findViewById(R.id.back1);
         point1 = findViewById(R.id.point1);
         point2 = findViewById(R.id.point2);
+        get_started = findViewById(R.id.get_started);
         back1.setOnClickListener(v -> startActivity(new Intent(this, Splash2.class)));
         point1.setOnClickListener(v -> startActivity(new Intent(this, Splash1.class)));
         point2.setOnClickListener(v -> startActivity(new Intent(this, Splash2.class)));
+        get_started.setOnClickListener(v -> startActivity(new Intent(this, Auth1_welcome.class)));
     }
 }

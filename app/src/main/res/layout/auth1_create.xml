@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/banner1"
+        android:layout_width="527dp"
+        android:layout_height="717dp"
+        android:layout_x="-75dp"
+        android:layout_y="-86dp"
+        android:src="@drawable/fem3" />
+
+    <ImageView
+        android:id="@+id/banner2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="0dp"
+        android:layout_y="531dp"
+        android:src="@drawable/rectangle_39" />
+
+    <ImageView
+        android:id="@+id/backarr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="8dp"
+        android:layout_y="26dp"
+        android:clickable="true"
+        android:src="@drawable/back" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="175dp"
+        android:layout_y="23dp"
+        android:gravity="center"
+        android:text="Welcome"
+        android:textColor="@color/white"
+        android:textSize="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="10dp"
+        android:layout_y="543dp"
+        android:text="Create account"
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="205dp"
+        android:layout_height="wrap_content"
+        android:layout_x="11dp"
+        android:layout_y="583dp"
+        android:text="Quickly create account"
+        android:textColor="@color/grey"
+        android:textSize="15dp" />
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:layout_x="30dp"
+        android:layout_y="630dp"
+        android:background="@drawable/edit"
+        android:drawableLeft="@drawable/email"
+        android:hint=" Email Address"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/phone"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:layout_x="30dp"
+        android:layout_y="680dp"
+        android:background="@drawable/edit"
+        android:drawableLeft="@drawable/phone"
+        android:hint=" Phone number"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:layout_x="30dp"
+        android:layout_y="730dp"
+        android:background="@drawable/edit"
+        android:drawableLeft="@drawable/lock"
+        android:drawableRight="@drawable/eye"
+        android:hint=" Password"
+        android:inputType="textPassword" />
+
+    <TextView
+        android:id="@+id/question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="100dp"
+        android:layout_y="847dp"
+        android:text="Already have an account ?" />
+
+    <TextView
+        android:id="@+id/log"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="266dp"
+        android:layout_y="847dp"
+        android:clickable="true"
+        android:text="Login"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/signup"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_x="88dp"
+        android:layout_y="795dp"
+        android:background="@drawable/gradient"
+        android:clickable="true"
+        android:text="Signup"
+        app:backgroundTint="@null" />
+</AbsoluteLayout>
