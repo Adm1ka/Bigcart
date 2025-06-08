@@ -1,17 +1,26 @@
 package com.example.bigcart;
 
+import static androidx.navigation.fragment.FragmentKt.findNavController;
+
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.widget.ImageView;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+
 public class Home extends AppCompatActivity {
-    public ImageView profile, fav, cart, veg, fruits, drinks, grocery, oil, household, babycare, nextarr;
+    public ImageView veg, fruits, drinks, grocery, oil, household, babycare, nextarr;
+    public  BottomNavigationView bottomNavigationView;
     @SuppressLint("MissingInflatedId")
 @Override
 protected void onCreate(Bundle savedInstanceState) {
@@ -24,10 +33,33 @@ protected void onCreate(Bundle savedInstanceState) {
         v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
         return insets;
     });
-        profile=findViewById(R.id.profile);
+        bottomNavigationView = findViewById(R.id.bottom_navigation);
+        bottomNavigationView.setOnItemSelectedListener(new BottomNavigationView.OnItemSelectedListener() {
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                int itemId = item.getItemId();
+
+                if (itemId == R.id.nav_home) {
+                    Intent intent = new Intent(Home.this, Home.class);
+                    startActivity(intent);
+                    return true;
+                } else if (itemId == R.id.nav_profile) {
+                    Intent intent = new Intent(Home.this, Profile.class);
+                    startActivity(intent);
+                    return true;}
+                else if (itemId == R.id.nav_fav) {
+//                    Intent intent = new Intent(Home.this, Favorite.class);
+//                    startActivity(intent);
+                    return true;
+                } else if (itemId == R.id.nav_cart) {
+//                    Intent intent = new Intent(Home.this, Cart.class);
+//                    startActivity(intent);
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+        });
         nextarr=findViewById(R.id.nextarr);
-        fav=findViewById(R.id.fav);
-        cart=findViewById(R.id.cart);
         veg=findViewById(R.id.veg);
         fruits=findViewById(R.id.fruits);
         drinks=findViewById(R.id.drinks);
@@ -36,9 +68,7 @@ protected void onCreate(Bundle savedInstanceState) {
         household=findViewById(R.id.household);
         babycare=findViewById(R.id.babycare);
 
-//        profile.setOnClickListener(v -> startActivity(new Intent(this, Profile.class)));
-//        fav.setOnClickListener(v -> startActivity(new Intent(this, Favorite.class)));
-//        cart.setOnClickListener(v -> startActivity(new Intent(this, Cart.class)));
+
 //        veg.setOnClickListener(v -> startActivity(new Intent(this, Vegetables.class)));
 //        fruits.setOnClickListener(v -> startActivity(new Intent(this, Fruits.class)));
 //        drinks.setOnClickListener(v -> startActivity(new Intent(this, Beverages.class)));

@@ -42,5 +42,14 @@
         <activity android:name=".Home"
             android:exported="true">
         </activity>
+        <activity android:name=".Profile"
+            android:exported="true">
+        </activity>
+        <activity android:name=".Favorite"
+            android:exported="true">
+        </activity>
+        <activity android:name=".Cart"
+            android:exported="true">
+        </activity>
     </application>
 </manifest>
