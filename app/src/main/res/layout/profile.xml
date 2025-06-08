@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_grey">
+
+    <Button
+        android:id="@+id/banner1"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_x="0dp"
+        android:layout_y="0dp"
+        android:background="@drawable/whiterec"
+        app:backgroundTint="@null"/>
+
+    <ImageView
+        android:id="@+id/pict"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_x="155dp"
+        android:layout_y="72dp"
+        android:src="@drawable/usergrey" />
+
+    <ImageView
+        android:id="@+id/photo"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_x="241dp"
+        android:layout_y="143dp"
+        android:src="@drawable/pict"
+        android:clickable="true"/>
+
+    <TextView
+        android:id="@+id/fullname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="137dp"
+        android:layout_y="170dp"
+        android:hint="Name Surname"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/emailadd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="162dp"
+        android:layout_y="197dp"
+        android:hint="Email Address"
+        android:textSize="15dp" />
+    <LinearLayout
+        android:layout_width="410dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_x="0dp"
+        android:layout_y="230dp">
+        <TextView
+            android:layout_width="355dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginBottom="20dp"
+            android:drawableLeft="@drawable/usergreen"
+            android:drawableRight="@drawable/nextarr"
+            android:text=" About me"
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_width="355dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginBottom="20dp"
+            android:drawableLeft="@drawable/box"
+            android:drawableRight="@drawable/nextarr"
+            android:text=" My Orders"
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_width="355dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginBottom="20dp"
+            android:drawableLeft="@drawable/favgreen"
+            android:drawableRight="@drawable/nextarr"
+            android:text=" My Favorites"
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_width="355dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginBottom="20dp"
+            android:drawableLeft="@drawable/addressgreen"
+            android:drawableRight="@drawable/nextarr"
+            android:text=" Address"
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_width="355dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginBottom="20dp"
+            android:drawableLeft="@drawable/cardgreen"
+            android:drawableRight="@drawable/nextarr"
+            android:text=" Credit Cards"
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_width="355dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginBottom="20dp"
+            android:drawableLeft="@drawable/transgreen"
+            android:drawableRight="@drawable/nextarr"
+            android:text=" Transactions"
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_width="355dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginBottom="20dp"
+            android:drawableLeft="@drawable/bellgreen"
+            android:drawableRight="@drawable/nextarr"
+            android:text=" Notifications"
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_width="355dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:drawableLeft="@drawable/signout"
+            android:drawableRight="@drawable/nextarr"
+            android:text=" Sign out"
+            android:textStyle="bold"/>
+    </LinearLayout>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_x="0dp"
+        android:layout_y="812dp"
+        app:itemTextColor="@color/bottom_nav_color"
+        app:menu="@menu/bottom_navigation_menu" />
+</AbsoluteLayout>

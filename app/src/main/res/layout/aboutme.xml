@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_grey">
+
+    <Button
+        android:id="@+id/banner1"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_x="0dp"
+        android:layout_y="0dp"
+        android:background="@drawable/whiterec"
+        app:backgroundTint="@null"/>
+    <ImageView
+        android:id="@+id/backarr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="8dp"
+        android:layout_y="26dp"
+        android:clickable="true"
+        android:src="@drawable/backarrblack" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="170dp"
+        android:layout_y="23dp"
+        android:gravity="center"
+        android:text="About me"
+        android:textColor="@color/black"
+        android:textSize="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="20dp"
+        android:layout_y="150dp"
+        android:text="Personal Details"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/fullname"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:layout_x="30dp"
+        android:layout_y="190dp"
+        android:background="@drawable/edit"
+        android:drawableLeft="@drawable/usergrey"
+        android:hint=" Name Surname"
+        android:inputType="text" />
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:layout_x="30dp"
+        android:layout_y="240dp"
+        android:background="@drawable/edit"
+        android:drawableLeft="@drawable/email"
+        android:hint=" Your Email"
+        android:inputType="textEmailAddress" />
+    <EditText
+        android:id="@+id/phone"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:layout_x="30dp"
+        android:layout_y="290dp"
+        android:background="@drawable/edit"
+        android:drawableLeft="@drawable/phone"
+        android:hint=" Phone Number"
+        android:inputType="phone" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="20dp"
+        android:layout_y="380dp"
+        android:text="Change Password"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/curpass"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:layout_x="30dp"
+        android:layout_y="420dp"
+        android:background="@drawable/edit"
+        android:drawableLeft="@drawable/lock"
+        android:hint=" Current password"
+        android:inputType="textPassword" />
+    <EditText
+        android:id="@+id/pass"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:layout_x="30dp"
+        android:layout_y="470dp"
+        android:background="@drawable/edit"
+        android:drawableLeft="@drawable/lock"
+        android:drawableRight="@drawable/eye"
+        android:hint=" New password"
+        android:inputType="textPassword" />
+    <EditText
+        android:id="@+id/confpass"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:layout_x="30dp"
+        android:layout_y="520dp"
+        android:background="@drawable/edit"
+        android:drawableLeft="@drawable/lock"
+        android:drawableRight="@drawable/eye"
+        android:hint=" Confirm password"
+        android:inputType="textPassword" />
+    <Button
+        android:id="@+id/signup"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_x="88dp"
+        android:layout_y="795dp"
+        android:background="@drawable/gradient"
+        android:clickable="true"
+        android:text="Save settings"
+        app:backgroundTint="@null" />
+
+</AbsoluteLayout>
