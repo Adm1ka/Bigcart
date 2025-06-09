@@ -218,6 +218,7 @@
         android:layout_height="wrap_content"
         android:layout_x="0dp"
         android:layout_y="812dp"
+        android:background="@color/white"
         app:itemTextColor="@color/bottom_nav_color"
         app:menu="@menu/bottom_navigation_menu"
         app:labelVisibilityMode="labeled"/>
