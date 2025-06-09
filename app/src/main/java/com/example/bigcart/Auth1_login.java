@@ -6,6 +6,7 @@ import android.os.Bundle;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SwitchCompat;
 import androidx.core.content.ContextCompat;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -22,8 +23,9 @@ import android.widget.TextView;
 public class Auth1_login extends AppCompatActivity{
 
     public ImageView backarr;
-    public TextView signup;
-    public EditText password;
+    public TextView signup, forgot;
+    public SwitchCompat remember;
+    public EditText password, email;
     public Button login;
     @SuppressLint("MissingInflatedId")
     @Override
@@ -39,6 +41,9 @@ public class Auth1_login extends AppCompatActivity{
         backarr = findViewById(R.id.backarr);
         signup=findViewById(R.id.signup);
         password = findViewById(R.id.password);
+        forgot = findViewById(R.id.forgot);
+        remember=findViewById(R.id.remember);
+        email = findViewById(R.id.email);
         login = findViewById(R.id.log);
         Drawable eye = ContextCompat.getDrawable(this, R.drawable.eye);
         Drawable eyehide = ContextCompat.getDrawable(this, R.drawable.eyehide);

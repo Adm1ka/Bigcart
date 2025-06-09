@@ -18,6 +18,8 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class Profile extends AppCompatActivity{
     public BottomNavigationView bottomNavigationView;
+    public TextView aboutme, orders, address, creditcards, transaction, notif, signout;
+    public ImageView photo, pict;
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +31,15 @@ public class Profile extends AppCompatActivity{
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        aboutme = findViewById(R.id.aboutme);
+        orders = findViewById(R.id.orders);
+        address = findViewById(R.id.address);
+        creditcards = findViewById(R.id.creditcards);
+        transaction = findViewById(R.id.transaction);
+        notif = findViewById(R.id.notif);
+        signout = findViewById(R.id.signout);
+        photo = findViewById(R.id.photo);
+        pict = findViewById(R.id.pict);
         bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setOnItemSelectedListener(new BottomNavigationView.OnItemSelectedListener() {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -42,18 +53,18 @@ public class Profile extends AppCompatActivity{
                     Intent intent = new Intent(Profile.this, Home.class);
                     startActivity(intent);
                     return true;}
-                else if (itemId == R.id.nav_fav) {
-//                    Intent intent = new Intent(Profile.this, Favorite.class);
-//                    startActivity(intent);
+                else if (itemId == R.id.nav_order) {
+                    Intent intent = new Intent(Profile.this, MyOrder.class);
+                    startActivity(intent);
                     return true;
                 } else if (itemId == R.id.nav_cart) {
-//                    Intent intent = new Intent(Profile.this, Cart.class);
-//                    startActivity(intent);
+                    Intent intent = new Intent(Profile.this, Cart.class);
+                    startActivity(intent);
                     return true;
                 } else {
                     return false;
                 }
             }
         });
-}
+    }
 }

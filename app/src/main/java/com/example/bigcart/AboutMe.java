@@ -21,6 +21,7 @@ import android.widget.TextView;
 public class AboutMe extends AppCompatActivity {
     public ImageView backarr;
     public EditText fullname, email, phone, curpass, pass, confpass;
+    public  Button saveset;
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +40,7 @@ public class AboutMe extends AppCompatActivity {
         curpass=findViewById(R.id.curpass);
         pass=findViewById(R.id.pass);
         confpass=findViewById(R.id.confpass);
+        saveset = findViewById(R.id.saveset);
         Drawable eye = ContextCompat.getDrawable(this, R.drawable.eye);
         Drawable eyehide = ContextCompat.getDrawable(this, R.drawable.eyehide);
         PasswordVisibilityToggle passwordVisibilityToggle = new PasswordVisibilityToggle(pass, eye, eyehide);

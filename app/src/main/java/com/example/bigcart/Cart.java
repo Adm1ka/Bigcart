@@ -17,6 +17,9 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 public class Cart extends AppCompatActivity {
+    public ImageView backarr;
+    public TextView subtotal, shippcharg, total;
+    public Button checkout;
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +30,17 @@ public class Cart extends AppCompatActivity {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
+        });
+        backarr = findViewById(R.id.backarr);
+        subtotal = findViewById(R.id.subtotal);
+        shippcharg = findViewById(R.id.shippcharg);
+        total = findViewById(R.id.total);
+        checkout = findViewById(R.id.checkout);
+        backarr.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
         });
     }
 }

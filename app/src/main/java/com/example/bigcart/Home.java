@@ -6,6 +6,7 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.EditText;
 import android.widget.ImageView;
 
 import androidx.activity.EdgeToEdge;
@@ -20,6 +21,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class Home extends AppCompatActivity {
     public ImageView veg, fruits, drinks, grocery, oil, household, babycare, nextarr;
+    public EditText search;
     public  BottomNavigationView bottomNavigationView;
     @SuppressLint("MissingInflatedId")
 @Override
@@ -46,19 +48,20 @@ protected void onCreate(Bundle savedInstanceState) {
                     Intent intent = new Intent(Home.this, Profile.class);
                     startActivity(intent);
                     return true;}
-                else if (itemId == R.id.nav_fav) {
-//                    Intent intent = new Intent(Home.this, Favorite.class);
-//                    startActivity(intent);
+                else if (itemId == R.id.nav_order) {
+                    Intent intent = new Intent(Home.this, MyOrder.class);
+                    startActivity(intent);
                     return true;
                 } else if (itemId == R.id.nav_cart) {
-//                    Intent intent = new Intent(Home.this, Cart.class);
-//                    startActivity(intent);
+                    Intent intent = new Intent(Home.this, Cart.class);
+                    startActivity(intent);
                     return true;
                 } else {
                     return false;
                 }
             }
         });
+        search=findViewById(R.id.search);
         nextarr=findViewById(R.id.nextarr);
         veg=findViewById(R.id.veg);
         fruits=findViewById(R.id.fruits);

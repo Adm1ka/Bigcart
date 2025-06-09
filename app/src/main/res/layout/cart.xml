@@ -1,6 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/light_grey">
+    <Button
+        android:id="@+id/banner1"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_x="0dp"
+        android:layout_y="0dp"
+        android:background="@drawable/whiterec"
+        app:backgroundTint="@null"/>
+    <ImageView
+        android:id="@+id/backarr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="8dp"
+        android:layout_y="36dp"
+        android:clickable="true"
+        android:src="@drawable/backarrblack" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="150dp"
+        android:layout_y="30dp"
+        android:text="Shopping Cart"
+        android:textColor="@color/black"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/banner2"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_x="0dp"
+        android:layout_y="692dp"
+        android:background="@drawable/whiterec"
+        app:backgroundTint="@null" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="20dp"
+        android:layout_y="710dp"
+        android:text="Subtotal"
+        android:textColor="@color/grey"
+        android:textSize="15dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="20dp"
+        android:layout_y="740dp"
+        android:text="Shipping charges"
+        android:textColor="@color/grey"
+        android:textSize="15dp"/>
+
+    <TextView
+        android:id="@+id/subtotal"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_x="350dp"
+        android:layout_y="710dp"
+        android:hint="$"
+        android:gravity="right"
+        android:textSize="15dp"/>
+    <TextView
+        android:id="@+id/shippcharg"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_x="350dp"
+        android:layout_y="740dp"
+        android:hint="$"
+        android:textSize="15dp"
+        android:gravity="right"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="20dp"
+        android:layout_y="770dp"
+        android:text="Total"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/total"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_x="350dp"
+        android:layout_y="770dp"
+        android:hint="$"
+        android:textSize="15dp"
+        android:gravity="right"/>
+
+    <Button
+        android:id="@+id/checkout"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_x="88dp"
+        android:layout_y="830dp"
+        android:background="@drawable/gradient"
+        android:clickable="true"
+        android:text="Checkout"
+        app:backgroundTint="@null" />
+
+</AbsoluteLayout>

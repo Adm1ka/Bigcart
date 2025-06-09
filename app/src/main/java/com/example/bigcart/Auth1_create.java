@@ -21,7 +21,7 @@ public class Auth1_create extends AppCompatActivity{
     public ImageView backarr;
     public Button signup;
     public TextView log;
-    public EditText password;
+    public EditText password, email, phone;
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +36,8 @@ public class Auth1_create extends AppCompatActivity{
         backarr = findViewById(R.id.backarr);
         signup = findViewById(R.id.signup);
         log = findViewById(R.id.log);
+        email = findViewById(R.id.email);
+        phone = findViewById(R.id.phone);
         password = findViewById(R.id.password);
         Drawable eye = ContextCompat.getDrawable(this, R.drawable.eye);
         Drawable eyehide = ContextCompat.getDrawable(this, R.drawable.eyehide);
