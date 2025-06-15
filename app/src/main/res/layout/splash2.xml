@@ -17,10 +17,8 @@
     <TextView
         android:layout_width="215dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="150dp"
-        android:layout_marginRight="185dp"
-        android:layout_x="108dp"
-        android:layout_y="68dp"
+        android:layout_x="110dp"
+        android:layout_y="70dp"
         android:text="Buy Premium Quality Fruits"
         android:textColor="#000000"
         android:textSize="35dp"
@@ -30,17 +28,16 @@
         android:id="@+id/nameapp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_x="139dp"
-        android:layout_y="157dp"
+        android:layout_x="140dp"
+        android:layout_y="160dp"
         android:src="@drawable/bigcart_1" />
 
     <Button
         android:id="@+id/get_started"
-        android:layout_width="250dp"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="645dp"
-        android:layout_x="91dp"
-        android:layout_y="811dp"
+        android:layout_x="30dp"
+        android:layout_y="810dp"
         android:background="@drawable/gradient"
         android:text="Get started"
         app:backgroundTint="@null" />
@@ -48,29 +45,29 @@
         android:id="@+id/back1"
         android:layout_width="75dp"
         android:layout_height="match_parent"
-        android:layout_x="-2dp"
-        android:layout_y="-1dp"
+        android:layout_x="0dp"
+        android:layout_y="0dp"
         android:background="@color/transparent_white"
         android:clickable="true" />
     <Button
         android:id="@+id/next1"
         android:layout_width="75dp"
         android:layout_height="match_parent"
-        android:layout_x="341dp"
+        android:layout_x="340dp"
         android:layout_y="0dp"
         android:background="@color/transparent_white"
         android:clickable="true" />
     <LinearLayout
         android:layout_width="50dp"
         android:layout_height="10dp"
-        android:layout_x="193dp"
-        android:layout_y="794dp">
+        android:layout_x="190dp"
+        android:layout_y="795dp">
         <Button
             android:id="@+id/point1"
             android:layout_width="10dp"
             android:layout_height="10dp"
             android:layout_x="260dp"
-            android:layout_y="783dp"
+            android:layout_y="780dp"
             android:background="@drawable/pointer"
             app:backgroundTint="@null" />
         <Button
@@ -79,7 +76,7 @@
             android:layout_height="10dp"
             android:layout_marginLeft="10dp"
             android:layout_x="260dp"
-            android:layout_y="783dp"
+            android:layout_y="780dp"
             android:background="@drawable/pointer_select"
             app:backgroundTint="@null" />
 
@@ -89,7 +86,7 @@
             android:layout_height="10dp"
             android:layout_marginLeft="10dp"
             android:layout_x="260dp"
-            android:layout_y="783dp"
+            android:layout_y="780dp"
             android:background="@drawable/pointer"
             app:backgroundTint="@null" />
     </LinearLayout>

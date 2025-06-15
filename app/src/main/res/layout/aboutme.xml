@@ -18,8 +18,8 @@
         android:id="@+id/backarr"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_x="8dp"
-        android:layout_y="36dp"
+        android:layout_x="10dp"
+        android:layout_y="35dp"
         android:clickable="true"
         android:src="@drawable/backarrblack" />
     <TextView
@@ -30,7 +30,8 @@
         android:gravity="center"
         android:text="About me"
         android:textColor="@color/black"
-        android:textSize="20dp" />
+        android:textSize="20dp"
+        android:textStyle="bold"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -114,9 +115,9 @@
         android:inputType="textPassword" />
     <Button
         android:id="@+id/saveset"
-        android:layout_width="250dp"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_x="88dp"
+        android:layout_x="30dp"
         android:layout_y="795dp"
         android:background="@drawable/gradient"
         android:clickable="true"

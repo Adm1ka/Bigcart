@@ -18,39 +18,41 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_x="0dp"
-        android:layout_y="531dp"
+        android:layout_y="530dp"
         android:src="@drawable/rectangle_39" />
     <ImageView
         android:id="@+id/backarr"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_x="8dp"
-        android:layout_y="26dp"
+        android:layout_x="10dp"
+        android:layout_y="25dp"
         android:clickable="true"
         android:src="@drawable/back" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_x="170dp"
-        android:layout_y="23dp"
+        android:layout_y="20dp"
         android:gravity="center"
         android:text="Welcome"
         android:textColor="@color/white"
-        android:textSize="20dp" />
+        android:textSize="20dp"
+        android:textStyle="bold"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_x="28dp"
+        android:layout_x="30dp"
         android:layout_y="595dp"
         android:text="Welcome"
         android:textColor="@color/black"
         android:textSize="30dp"
         android:textStyle="bold" />
     <TextView
-        android:layout_width="362dp"
+        android:layout_width="360dp"
         android:layout_height="wrap_content"
-        android:layout_x="28dp"
-        android:layout_y="654dp"
+        android:layout_x="30dp"
+        android:layout_y="655dp"
+        android:gravity="center"
         android:text="Welcome to our shopping app! Create an account to access all the features and start making profitable purchases."
         android:textColor="@color/grey"
         android:textSize="15dp" />
@@ -58,24 +60,24 @@
         android:id="@+id/question"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_x="103dp"
-        android:layout_y="822dp"
+        android:layout_x="100dp"
+        android:layout_y="820dp"
         android:text="Already have an account ?" />
     <TextView
         android:id="@+id/log"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_x="268dp"
-        android:layout_y="822dp"
+        android:layout_x="265dp"
+        android:layout_y="820dp"
         android:textStyle="bold"
         android:clickable="true"
         android:text="Login" />
     <Button
         android:id="@+id/create"
-        android:layout_width="250dp"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_x="83dp"
-        android:layout_y="757dp"
+        android:layout_x="30dp"
+        android:layout_y="760dp"
         android:background="@drawable/gradient"
         android:drawableLeft="@drawable/user"
         android:text="Create an account"

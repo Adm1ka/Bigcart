@@ -18,30 +18,31 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_x="0dp"
-        android:layout_y="531dp"
+        android:layout_y="530dp"
         android:src="@drawable/rectangle_39" />
     <ImageView
         android:id="@+id/backarr"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_x="8dp"
-        android:layout_y="26dp"
+        android:layout_x="10dp"
+        android:layout_y="25dp"
         android:clickable="true"
         android:src="@drawable/back" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_x="170dp"
-        android:layout_y="23dp"
+        android:layout_y="20dp"
         android:gravity="center"
         android:text="Welcome"
         android:textColor="@color/white"
-        android:textSize="20dp" />
+        android:textSize="20dp"
+        android:textStyle="bold"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_x="10dp"
-        android:layout_y="543dp"
+        android:layout_y="540dp"
         android:text="Create account"
         android:textColor="@color/black"
         android:textSize="30dp"
@@ -49,8 +50,8 @@
     <TextView
         android:layout_width="205dp"
         android:layout_height="wrap_content"
-        android:layout_x="11dp"
-        android:layout_y="583dp"
+        android:layout_x="10dp"
+        android:layout_y="580dp"
         android:text="Quickly create account"
         android:textColor="@color/grey"
         android:textSize="15dp" />
@@ -73,7 +74,7 @@
         android:background="@drawable/edit"
         android:drawableLeft="@drawable/phone"
         android:hint=" Phone number"
-        android:inputType="textEmailAddress" />
+        android:inputType="phone" />
     <EditText
         android:id="@+id/password"
         android:layout_width="350dp"
@@ -90,22 +91,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_x="100dp"
-        android:layout_y="847dp"
+        android:layout_y="850dp"
         android:text="Already have an account ?" />
     <TextView
         android:id="@+id/log"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_x="266dp"
-        android:layout_y="847dp"
+        android:layout_x="265dp"
+        android:layout_y="850dp"
         android:clickable="true"
         android:text="Login"
         android:textStyle="bold" />
     <Button
         android:id="@+id/signup"
-        android:layout_width="250dp"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_x="88dp"
+        android:layout_x="30dp"
         android:layout_y="795dp"
         android:background="@drawable/gradient"
         android:clickable="true"

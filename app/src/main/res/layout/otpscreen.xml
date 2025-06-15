@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_grey">
+    <TextView
+        android:id="@+id/banner1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="150dp"
+        android:layout_y="30dp"
+        android:gravity="center"
+        android:text="Verify Number"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"/>
+    <ImageView
+        android:id="@+id/backarr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="10dp"
+        android:layout_y="35dp"
+        android:clickable="true"
+        android:src="@drawable/backarrblack" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="80dp"
+        android:layout_y="150dp"
+        android:text="Verify your number"
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="30dp"
+        android:layout_x="60dp"
+        android:layout_y="200dp"
+        android:gravity="center"
+        android:text="Enter your OTP code."
+        android:textColor="@color/grey"
+        android:textSize="15dp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_y="230dp"
+        android:gravity="center">
+
+        <EditText
+            android:id="@+id/editText1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:inputType="number"
+            android:maxLength="1"
+            android:gravity="center"
+            android:background="@drawable/rounded_edittext"
+            android:imeOptions="actionNext"
+            android:nextFocusForward="@+id/editText2"
+            android:selectAllOnFocus="true"/>
+
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:inputType="number"
+            android:maxLength="1"
+            android:gravity="center"
+            android:background="@drawable/rounded_edittext"
+            android:imeOptions="actionNext"
+            android:nextFocusForward="@+id/editText3"
+            android:selectAllOnFocus="true"/>
+        <EditText
+            android:id="@+id/editText3"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:inputType="number"
+            android:maxLength="1"
+            android:gravity="center"
+            android:background="@drawable/rounded_edittext"
+            android:imeOptions="actionNext"
+            android:nextFocusForward="@+id/editText4"
+            android:selectAllOnFocus="true"/>
+        <EditText
+            android:id="@+id/editText4"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:inputType="number"
+            android:maxLength="1"
+            android:gravity="center"
+            android:background="@drawable/rounded_edittext"
+            android:imeOptions="actionNext"
+            android:nextFocusForward="@+id/editText5"
+            android:selectAllOnFocus="true"/>
+        <EditText
+            android:id="@+id/editText5"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:inputType="number"
+            android:maxLength="1"
+            android:gravity="center"
+            android:background="@drawable/rounded_edittext"
+            android:imeOptions="actionNext"
+            android:nextFocusForward="@+id/editText6"
+            android:selectAllOnFocus="true"/>
+        <EditText
+            android:id="@+id/editText6"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:inputType="number"
+            android:maxLength="1"
+            android:gravity="center"
+            android:background="@drawable/rounded_edittext"
+            android:imeOptions="actionDone"
+            android:selectAllOnFocus="true"/>
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="130dp"
+        android:layout_y="360dp"
+        android:text="Did’nt receive the code ?"
+        android:textColor="@color/grey"
+        android:textSize="15dp"/>
+    <TextView
+        android:id="@+id/newcode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="145dp"
+        android:layout_y="380dp"
+        android:text="Resend a new code"
+        android:textColor="@color/black"
+        android:textSize="15dp"/>
+
+    <Button
+        android:id="@+id/next2"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_x="30dp"
+        android:layout_y="300dp"
+        android:background="@drawable/gradient"
+        android:clickable="true"
+        android:text="Next"
+        app:backgroundTint="@null" />
+</AbsoluteLayout>

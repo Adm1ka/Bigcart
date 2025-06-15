@@ -17,8 +17,8 @@
         android:id="@+id/backarr"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_x="8dp"
-        android:layout_y="36dp"
+        android:layout_x="10dp"
+        android:layout_y="35dp"
         android:clickable="true"
         android:src="@drawable/backarrblack" />
 
@@ -29,7 +29,8 @@
         android:layout_y="30dp"
         android:text="Shopping Cart"
         android:textColor="@color/black"
-        android:textSize="20dp" />
+        android:textSize="20dp"
+        android:textStyle="bold"/>
 
     <Button
         android:id="@+id/banner2"
@@ -96,9 +97,9 @@
 
     <Button
         android:id="@+id/checkout"
-        android:layout_width="250dp"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_x="88dp"
+        android:layout_x="30dp"
         android:layout_y="830dp"
         android:background="@drawable/gradient"
         android:clickable="true"

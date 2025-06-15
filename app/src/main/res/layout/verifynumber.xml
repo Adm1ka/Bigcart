@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_grey">
+    <TextView
+        android:id="@+id/banner1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="150dp"
+        android:layout_y="30dp"
+        android:gravity="center"
+        android:text="Verify Number"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"/>
+    <ImageView
+        android:id="@+id/backarr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="10dp"
+        android:layout_y="35dp"
+        android:clickable="true"
+        android:src="@drawable/backarrblack" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="80dp"
+        android:layout_y="150dp"
+        android:text="Verify your number"
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_x="60dp"
+        android:layout_y="200dp"
+        android:gravity="center"
+        android:text="Enter your phone number to send the confirmation code."
+        android:textColor="@color/grey"
+        android:textSize="15dp" />
+
+    <EditText
+        android:id="@+id/phone"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:layout_x="30dp"
+        android:layout_y="270dp"
+        android:background="@drawable/edit"
+        android:drawableLeft="@drawable/phone"
+        android:hint=" Phone number"
+        android:inputType="phone" />
+    <Button
+        android:id="@+id/next2"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_x="30dp"
+        android:layout_y="330dp"
+        android:background="@drawable/gradient"
+        android:clickable="true"
+        android:text="Next"
+        app:backgroundTint="@null" />
+</AbsoluteLayout>

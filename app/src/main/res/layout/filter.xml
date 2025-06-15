@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_grey">
+    <Button
+        android:id="@+id/banner1"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_x="0dp"
+        android:layout_y="0dp"
+        android:background="@drawable/whiterec"
+        app:backgroundTint="@null"/>
+
+    <Button
+        android:id="@+id/banner2"
+        android:layout_width="350dp"
+        android:layout_height="190dp"
+        android:layout_x="30dp"
+        android:layout_y="130dp"
+        android:background="@drawable/whiterec"
+        app:backgroundTint="@null" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="40dp"
+        android:layout_y="140dp"
+        android:text="Price Range"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/mincost"
+        android:layout_width="160dp"
+        android:layout_height="40dp"
+        android:layout_x="40dp"
+        android:layout_y="170dp"
+        android:background="@drawable/edit"
+        android:hint="Min."
+        android:inputType="number"/>
+
+    <EditText
+        android:id="@+id/maxcost"
+        android:layout_width="160dp"
+        android:layout_height="40dp"
+        android:layout_x="210dp"
+        android:layout_y="170dp"
+        android:background="@drawable/edit"
+        android:hint="Max."
+        android:inputType="number"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="40dp"
+        android:layout_y="220dp"
+        android:text="Other"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/disc"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:layout_x="40dp"
+        android:layout_y="260dp"
+        android:text=" Discount"
+        android:textColor="@color/grey"
+        android:drawableLeft="@drawable/discount"
+        android:drawableRight="@drawable/donewhite"
+        android:textSize="15dp" />
+    <TextView
+        android:id="@+id/freeship"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:layout_x="40dp"
+        android:layout_y="290dp"
+        android:text=" Free hipping"
+        android:textColor="@color/grey"
+        android:drawableLeft="@drawable/delivery"
+        android:drawableRight="@drawable/donewhite"
+        android:textSize="15dp" />
+
+    <ImageView
+        android:id="@+id/backarr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="10dp"
+        android:layout_y="35dp"
+        android:clickable="true"
+        android:src="@drawable/backarrblack" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="160dp"
+        android:layout_y="30dp"
+        android:gravity="center"
+        android:text="Apply Filters"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"/>
+    <ImageView
+        android:id="@+id/def"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/refresh"
+        android:layout_y="30dp"
+        android:layout_x="380dp"/>
+    <Button
+        android:id="@+id/applyfilt"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_x="30dp"
+        android:layout_y="810dp"
+        android:background="@drawable/gradient"
+        android:clickable="true"
+        android:text="Apply filters"
+        app:backgroundTint="@null" />
+</AbsoluteLayout>

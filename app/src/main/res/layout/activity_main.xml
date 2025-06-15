@@ -14,12 +14,12 @@
         android:layout_y="-35dp"
         android:src="@drawable/load" />
     <TextView
-        android:layout_width="247dp"
+        android:layout_width="245dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="150dp"
         android:layout_marginRight="185dp"
-        android:layout_x="79dp"
-        android:layout_y="109dp"
+        android:layout_x="80dp"
+        android:layout_y="110dp"
         android:gravity="center"
         android:text="Welcome to"
         android:textColor="#000000"
@@ -30,7 +30,7 @@
         android:id="@+id/nameapp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_x="139dp"
-        android:layout_y="157dp"
+        android:layout_x="140dp"
+        android:layout_y="160dp"
         android:src="@drawable/bigcart_1" />
 </AbsoluteLayout>
