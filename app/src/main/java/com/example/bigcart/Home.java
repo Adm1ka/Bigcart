@@ -71,14 +71,13 @@ protected void onCreate(Bundle savedInstanceState) {
         household=findViewById(R.id.household);
         babycare=findViewById(R.id.babycare);
 
-
-//        veg.setOnClickListener(v -> startActivity(new Intent(this, Vegetables.class)));
-//        fruits.setOnClickListener(v -> startActivity(new Intent(this, Fruits.class)));
-//        drinks.setOnClickListener(v -> startActivity(new Intent(this, Beverages.class)));
-//        grocery.setOnClickListener(v -> startActivity(new Intent(this, Grocery.class)));
-//        oil.setOnClickListener(v -> startActivity(new Intent(this, Edible oil.class)));
-//        household.setOnClickListener(v -> startActivity(new Intent(this, Household.class)));
-//        babycare.setOnClickListener(v -> startActivity(new Intent(this, Babycare.class)));
-//        nextarr.setOnClickListener(v -> startActivity(new Intent(this, Categories.class)));
+        veg.setOnClickListener(v -> startActivity(new Intent(this, Vegetables.class)));
+        fruits.setOnClickListener(v -> startActivity(new Intent(this, Fruits.class)));
+        drinks.setOnClickListener(v -> startActivity(new Intent(this, Beverages.class)));
+        grocery.setOnClickListener(v -> startActivity(new Intent(this, Grocery.class)));
+        oil.setOnClickListener(v -> startActivity(new Intent(this, EdibleOil.class)));
+        household.setOnClickListener(v -> startActivity(new Intent(this, Household.class)));
+        babycare.setOnClickListener(v -> startActivity(new Intent(this, Babycare.class)));
+        nextarr.setOnClickListener(v -> startActivity(new Intent(this, Category.class)));
     }
 }

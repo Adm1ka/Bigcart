@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_grey">
+    <Button
+        android:id="@+id/banner1"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_x="0dp"
+        android:layout_y="0dp"
+        android:background="@drawable/whiterec"
+        app:backgroundTint="@null"/>
+    <ImageView
+        android:id="@+id/backarr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="10dp"
+        android:layout_y="35dp"
+        android:clickable="true"
+        android:src="@drawable/backarrblack" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="160dp"
+        android:layout_y="30dp"
+        android:gravity="center"
+        android:text="Babycare"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="20dp" />
+    <ImageView
+        android:id="@+id/filter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/filter"
+        android:layout_y="30dp"
+        android:layout_x="380dp"/>
+</AbsoluteLayout>

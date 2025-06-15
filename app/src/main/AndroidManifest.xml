@@ -66,5 +66,38 @@
         <activity android:name=".Product"
             android:exported="true">
         </activity>
+        <activity android:name=".Category"
+            android:exported="true">
+        </activity>
+        <activity android:name=".Vegetables"
+            android:exported="true">
+        </activity>
+        <activity android:name=".Fruits"
+            android:exported="true">
+        </activity>
+        <activity android:name=".Beverages"
+            android:exported="true">
+        </activity>
+        <activity android:name="Grocery"
+            android:exported="true">
+        </activity>
+        <activity android:name="EdibleOil"
+            android:exported="true">
+        </activity>
+        <activity android:name="Household"
+            android:exported="true">
+        </activity>
+        <activity android:name="Babycare"
+            android:exported="true">
+        </activity>
+        <activity android:name=".AddAddress"
+            android:exported="true">
+        </activity>
+        <activity android:name=".MyAddress"
+            android:exported="true">
+        </activity>
+        <activity android:name=".AboutMe"
+            android:exported="true">
+        </activity>
     </application>
 </manifest>

@@ -25,103 +25,91 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_x="170dp"
+        android:layout_x="160dp"
         android:layout_y="30dp"
         android:gravity="center"
-        android:text="About me"
+        android:text="Add Address"
         android:textColor="@color/black"
         android:textSize="20dp"
         android:textStyle="bold"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_x="20dp"
-        android:layout_y="150dp"
-        android:text="Personal Details"
-        android:textSize="20dp"
-        android:textStyle="bold" />
-
     <EditText
-        android:id="@+id/fullname"
+        android:id="@+id/name"
         android:layout_width="350dp"
         android:layout_height="40dp"
         android:layout_x="30dp"
-        android:layout_y="190dp"
+        android:layout_y="130dp"
         android:background="@drawable/edit"
         android:drawableLeft="@drawable/usergrey"
-        android:hint=" Name Surname"
+        android:hint=" Name"
         android:inputType="text" />
     <EditText
         android:id="@+id/email"
         android:layout_width="350dp"
         android:layout_height="40dp"
         android:layout_x="30dp"
-        android:layout_y="240dp"
+        android:layout_y="180dp"
         android:background="@drawable/edit"
         android:drawableLeft="@drawable/email"
-        android:hint=" Your Email"
+        android:hint=" Email Address"
         android:inputType="textEmailAddress" />
     <EditText
         android:id="@+id/phone"
         android:layout_width="350dp"
         android:layout_height="40dp"
         android:layout_x="30dp"
-        android:layout_y="290dp"
+        android:layout_y="230dp"
         android:background="@drawable/edit"
         android:drawableLeft="@drawable/phone"
         android:hint=" Phone Number"
         android:inputType="phone" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_x="20dp"
+    <EditText
+        android:id="@+id/address"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:layout_x="30dp"
+        android:layout_y="280dp"
+        android:background="@drawable/edit"
+        android:drawableLeft="@drawable/address"
+        android:hint=" Address"
+        android:inputType="text" />
+    <EditText
+        android:id="@+id/zip"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:layout_x="30dp"
+        android:layout_y="330dp"
+        android:background="@drawable/edit"
+        android:drawableLeft="@drawable/code"
+        android:hint=" Zip code"
+        android:inputType="number" />
+    <EditText
+        android:id="@+id/city"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:layout_x="30dp"
         android:layout_y="380dp"
-        android:text="Change Password"
-        android:textSize="20dp"
-        android:textStyle="bold" />
-
+        android:background="@drawable/edit"
+        android:drawableLeft="@drawable/map"
+        android:hint=" City"
+        android:inputType="text" />
     <EditText
-        android:id="@+id/curpass"
+        android:id="@+id/country"
         android:layout_width="350dp"
         android:layout_height="40dp"
         android:layout_x="30dp"
-        android:layout_y="420dp"
+        android:layout_y="430dp"
         android:background="@drawable/edit"
-        android:drawableLeft="@drawable/lock"
-        android:hint=" Current password"
-        android:inputType="textPassword" />
-    <EditText
-        android:id="@+id/pass"
-        android:layout_width="350dp"
-        android:layout_height="40dp"
-        android:layout_x="30dp"
-        android:layout_y="470dp"
-        android:background="@drawable/edit"
-        android:drawableLeft="@drawable/lock"
-        android:drawableRight="@drawable/eye"
-        android:hint=" New password"
-        android:inputType="textPassword" />
-    <EditText
-        android:id="@+id/confpass"
-        android:layout_width="350dp"
-        android:layout_height="40dp"
-        android:layout_x="30dp"
-        android:layout_y="520dp"
-        android:background="@drawable/edit"
-        android:drawableLeft="@drawable/lock"
-        android:drawableRight="@drawable/eye"
-        android:hint=" Confirm password"
-        android:inputType="textPassword" />
+        android:drawableLeft="@drawable/country"
+        android:hint=" Country"
+        android:inputType="text" />
     <Button
-        android:id="@+id/saveset"
+        android:id="@+id/addaddress"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_x="35dp"
+        android:layout_x="30dp"
         android:layout_y="795dp"
         android:background="@drawable/gradient"
         android:clickable="true"
-        android:text="Save settings"
+        android:text="Add address"
         app:backgroundTint="@null" />
-
 </AbsoluteLayout>

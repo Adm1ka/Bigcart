@@ -66,5 +66,11 @@ public class Profile extends AppCompatActivity{
                 }
             }
         });
+        aboutme.setOnClickListener(v -> startActivity(new Intent(this, AboutMe.class)));
+        orders.setOnClickListener(v -> startActivity(new Intent(this, MyOrder.class)));
+        address.setOnClickListener(v -> startActivity(new Intent(this, MyAddress.class)));
+//        creditcards.setOnClickListener(v -> startActivity(new Intent(this, MyCards.class)));
+//        transaction.setOnClickListener(v -> startActivity(new Intent(this, Transaction.class)));
+//        notif.setOnClickListener(v -> startActivity(new Intent(this, Notification.class)));
     }
 }
