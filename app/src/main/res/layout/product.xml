@@ -74,12 +74,12 @@
             android:text="Quantity"
             android:textColor="@color/grey"
             android:textSize="15dp" />
-        <Button
+        <ImageButton
             android:id="@+id/remove"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:background="@drawable/quantity_button_background"
-            android:drawableBottom="@drawable/minus"
+            android:src="@drawable/minus"
             app:backgroundTint="@null" />
         <TextView
             android:id="@+id/textquant"
@@ -90,12 +90,12 @@
             android:text="0"
             android:textColor="#000000"
             android:textSize="20dp" />
-        <Button
+        <ImageButton
             android:id="@+id/add"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:background="@drawable/quantity_button_background"
-            android:drawableBottom="@drawable/plus"
+            android:src="@drawable/plus"
             app:backgroundTint="@null" />
     </LinearLayout>
     <Button
