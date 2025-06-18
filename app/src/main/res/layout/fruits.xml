@@ -38,4 +38,10 @@
         android:src="@drawable/filter"
         android:layout_y="30dp"
         android:layout_x="380dp"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/fruitsrecv"
+        android:layout_width="390dp"
+        android:layout_height="770dp"
+        android:layout_x="10dp"
+        android:layout_y="110dp" />
 </AbsoluteLayout>

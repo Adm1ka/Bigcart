@@ -9,26 +9,43 @@ import androidx.core.content.ContextCompat;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import android.content.Intent;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.bigcart.Adapters.FruitsAdapter;
+import com.example.bigcart.Adapters.VegetablesAdapter;
+import com.example.bigcart.Models.Product;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
+import java.io.IOException;
+import java.lang.reflect.Type;
+import java.util.List;
+
 public class Fruits extends AppCompatActivity {
     public ImageView backarr, filter;
+    public RecyclerView fruitsrecv;
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.fruits);
+        getFruits();
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.banner1), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        fruitsrecv=findViewById(R.id.fruitsrecv);
         backarr = findViewById(R.id.backarr);
         filter = findViewById(R.id.filter);
         backarr.setOnClickListener(new View.OnClickListener() {
@@ -38,5 +55,30 @@ public class Fruits extends AppCompatActivity {
             }
         });
         filter.setOnClickListener(v -> startActivity(new Intent(this, Filter.class)));
+    }
+    private void getFruits() {
+        SupabaseClient supabaseClient = new SupabaseClient();
+        supabaseClient.fetchFruits(new SupabaseClient.SBC_Callback() {
+            @Override
+            public void onFailure(IOException e) {
+                runOnUiThread(() -> {
+                    Log.e("getFruits:onFailure", e.getLocalizedMessage());
+                });
+            }
+
+            @Override
+            public void onResponse(String responseBody) {
+                runOnUiThread(() -> {
+                    Log.e("getFruits:onResponse", responseBody);
+                    Gson gson = new Gson();
+                    Type type = new TypeToken<List<com.example.bigcart.Models.Product>>() {
+                    }.getType();
+                    List<Product> productList = gson.fromJson(responseBody, type);
+                    FruitsAdapter fruitsAdapter = new FruitsAdapter(getApplicationContext(), productList);
+                    fruitsrecv.setAdapter(fruitsAdapter);
+                    fruitsrecv.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
+                });
+            }
+        });
     }
 }

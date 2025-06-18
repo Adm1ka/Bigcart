@@ -16,6 +16,7 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.example.bigcart.Adapters.OrdersAdapter;
 import com.example.bigcart.Models.Order;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -64,8 +65,8 @@ public class MyOrder extends AppCompatActivity {
                 } else if (itemId == R.id.nav_home) {
                     Intent intent = new Intent(MyOrder.this, Home.class);
                     startActivity(intent);
-                    return true;}
-                else if (itemId == R.id.nav_profile) {
+                    return true;
+                } else if (itemId == R.id.nav_profile) {
                     Intent intent = new Intent(MyOrder.this, Profile.class);
                     startActivity(intent);
                     return true;
@@ -79,23 +80,25 @@ public class MyOrder extends AppCompatActivity {
             }
         });
     }
-    private void getAllOrders(){
+    private void getAllOrders() {
         SupabaseClient supabaseClient = new SupabaseClient();
         supabaseClient.fetchAllOrders(new SupabaseClient.SBC_Callback() {
             @Override
             public void onFailure(IOException e) {
-                runOnUiThread(()->{
+                runOnUiThread(() -> {
                     Log.e("getAllOrders:onFailure", e.getLocalizedMessage());
                 });
             }
+
             @Override
             public void onResponse(String responseBody) {
-                runOnUiThread(()->{
+                runOnUiThread(() -> {
                     Log.e("getAllOrders:onResponse", responseBody);
                     Gson gson = new Gson();
-                    Type type = new TypeToken<List<Order>>(){}.getType();
+                    Type type = new TypeToken<List<Order>>() {
+                    }.getType();
                     List<Order> orderList = gson.fromJson(responseBody, type);
-                    OrdersAdapter ordersAdapter = new OrdersAdapter(getApplicationContext(),orderList);
+                    OrdersAdapter ordersAdapter = new OrdersAdapter(getApplicationContext(), orderList);
                     orderrecv.setAdapter(ordersAdapter);
                     orderrecv.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
                 });
