@@ -55,27 +55,37 @@
         android:text="Sign in to your account"
         android:textColor="@color/grey"
         android:textSize="15dp" />
-    <EditText
-        android:id="@+id/email"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/emailTextInput"
         android:layout_width="350dp"
-        android:layout_height="40dp"
+        android:layout_height="60dp"
         android:layout_x="30dp"
-        android:layout_y="640dp"
-        android:background="@drawable/edit"
-        android:drawableLeft="@drawable/email"
-        android:hint=" Email Address"
-        android:inputType="textEmailAddress" />
-    <EditText
-        android:id="@+id/password"
+        android:layout_y="610dp"
+        android:hint="Email Address"
+        app:startIconDrawable="@drawable/email">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/emailedit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:inputType="textEmailAddress" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/passwordTextInputLayout"
         android:layout_width="350dp"
-        android:layout_height="40dp"
+        android:layout_height="60dp"
         android:layout_x="30dp"
-        android:layout_y="690dp"
-        android:background="@drawable/edit"
-        android:drawableLeft="@drawable/lock"
-        android:drawableRight="@drawable/eye"
-        android:hint=" Password"
-        android:inputType="textPassword" />
+        android:layout_y="680dp"
+        android:hint="Password"
+        app:passwordToggleEnabled="true"
+        app:startIconDrawable="@drawable/lock">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/passwordedit"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textPassword" />
+    </com.google.android.material.textfield.TextInputLayout>
     <androidx.appcompat.widget.SwitchCompat
         android:id="@+id/remember"
         android:layout_width="40dp"

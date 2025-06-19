@@ -17,14 +17,18 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
 
 public class Auth1_create extends AppCompatActivity{
     public ImageView backarr;
     public Button signup;
     public TextView log;
-    public EditText password, email, phone;
-//    private static final String BASE_URL="https://simttaxqfqsbjkqhwtre.supabase.co/auth/v1/signup";
-//    private static final String API_KEY="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNpbXR0YXhxZnFzYmprcWh3dHJlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDkwMzI3MTcsImV4cCI6MjA2NDYwODcxN30.xGy-mo6G9WKYn5y7Xm841lZD5xtvxjztAc_jmucel_E";
+    public TextInputEditText passwordedit, emailedit, phoneedit;
+    public TextInputLayout emailTextInput,passwordTextInputLayout,phoneTextInputLayout;
+
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,16 +40,15 @@ public class Auth1_create extends AppCompatActivity{
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        emailTextInput = findViewById(R.id.emailTextInput);
+        passwordTextInputLayout = findViewById(R.id.passwordTextInputLayout);
+        phoneTextInputLayout=findViewById(R.id.phoneTextInputLayout);
         backarr = findViewById(R.id.backarr);
         signup = findViewById(R.id.signup);
         log = findViewById(R.id.log);
-        email = findViewById(R.id.email);
-        phone = findViewById(R.id.phone);
-        password = findViewById(R.id.password);
-        Drawable eye = ContextCompat.getDrawable(this, R.drawable.eye);
-        Drawable eyehide = ContextCompat.getDrawable(this, R.drawable.eyehide);
-        PasswordVisibilityToggle passwordVisibilityToggle = new PasswordVisibilityToggle(password, eye, eyehide);
-        password.setOnTouchListener(passwordVisibilityToggle);
+        emailedit = findViewById(R.id.emailedit);
+        phoneedit= findViewById(R.id.phoneedit);
+        passwordedit = findViewById(R.id.passwordedit);
         backarr.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -53,6 +56,62 @@ public class Auth1_create extends AppCompatActivity{
             }
         });
         log.setOnClickListener(v -> startActivity(new Intent(this, Auth1_login.class)));
-        signup.setOnClickListener(v -> startActivity(new Intent(this, Home.class)));
+//        signup.setOnClickListener(v -> startActivity(new Intent(this, Home.class)));
+        signup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (validateInput()) {
+                    signupUser();
+                }
+            }
+        });
+    }
+    private boolean validateInput() {
+        String email = emailedit.getText().toString().trim();
+        String phone = phoneedit.getText().toString().trim();
+        String password = passwordedit.getText().toString().trim();
+
+        // Email Validation
+        if (email.isEmpty()) {
+            emailTextInput.setError("Email is required");
+            return false;
+        } else if (!isValidEmail(email)) {
+            emailTextInput.setError("Invalid email address");
+            return false;
+        } else {
+            emailTextInput.setError(null);
+        }
+        if (phone.isEmpty()) {
+            phoneTextInputLayout.setError("Phone number is required");
+            return false;
+        } else if (!isValidPhoneNumber(phone)) {
+            phoneTextInputLayout.setError("Invalid phone number");
+            return false;
+        } else {
+            phoneTextInputLayout.setError(null);
+        }
+        if (password.isEmpty()) {
+            passwordTextInputLayout.setError("Password is required");
+            return false;
+        } else if (password.length() < 6) {
+            passwordTextInputLayout.setError("Password must be at least 6 characters");
+            return false;
+        } else {
+            passwordTextInputLayout.setError(null);
+        }
+
+        return true;
+    }
+    private boolean isValidEmail(String email) {
+        String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
+        return email.matches(emailPattern);
+    }
+    private boolean isValidPhoneNumber(String phone) {
+        String phonePattern = "^\\+?[0-9]{10,13}$";
+        return phone.matches(phonePattern);
+    }
+    private void signupUser() {
+        Toast.makeText(this, "Signup Successful!", Toast.LENGTH_SHORT).show();
     }
 }
+

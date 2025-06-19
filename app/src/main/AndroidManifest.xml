@@ -99,5 +99,8 @@
         <activity android:name=".AboutMe"
             android:exported="true">
         </activity>
+        <activity android:name=".Pincode"
+            android:exported="true">
+        </activity>
     </application>
 </manifest>
