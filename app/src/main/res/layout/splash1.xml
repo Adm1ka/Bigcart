@@ -1,89 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@drawable/splash1">
 
-    <ImageView
+    <LinearLayout
         android:id="@+id/banner1"
-        android:layout_width="980dp"
-        android:layout_height="1071dp"
-        android:layout_x="-307dp"
-        android:layout_y="-35dp"
-        android:src="@drawable/splash_1" />
-
-    <TextView
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="150dp"
-        android:layout_x="80dp"
-        android:layout_y="65dp"
-        android:gravity="center"
-        android:text="Buy Quality Dairy Products"
-        android:textColor="#000000"
-        android:textSize="35dp"
-        android:textStyle="bold" />
-
-    <ImageView
-        android:id="@+id/nameapp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_x="140dp"
-        android:layout_y="160dp"
-        android:src="@drawable/bigcart_1" />
-
-    <Button
-        android:id="@+id/get_started"
         android:layout_width="350dp"
-        android:layout_height="wrap_content"
-        android:layout_x="30dp"
-        android:layout_y="810dp"
-        android:background="@drawable/gradient"
-        android:text="Get started"
-        app:backgroundTint="@null" />
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+        <TextView
+            android:layout_gravity="center"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="150dp"
+            android:layout_marginLeft="35dp"
+            android:gravity="center"
+            android:text="Buy Quality Dairy Products"
+            android:textColor="#000000"
+            android:textSize="35dp"
+            android:textStyle="bold" />
 
+        <ImageView
+            android:id="@+id/nameapp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:src="@drawable/bigcart_1"/>
+        <LinearLayout
+            android:layout_width="50dp"
+            android:layout_height="10dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="500dp">
+            <Button
+                android:id="@+id/point1"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:background="@drawable/pointer_select"
+                app:backgroundTint="@null" />
+            <Button
+                android:id="@+id/point2"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/pointer"
+                app:backgroundTint="@null" />
+
+            <Button
+                android:id="@+id/point3"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/pointer"
+                app:backgroundTint="@null" />
+        </LinearLayout>
+        <Button
+            android:layout_marginLeft="35dp"
+            android:layout_gravity="center"
+            android:id="@+id/get_started"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/gradient"
+            android:text="Get started"
+            app:backgroundTint="@null" />
+    </LinearLayout>
     <Button
         android:id="@+id/next1"
         android:layout_width="75dp"
         android:layout_height="match_parent"
-        android:layout_x="340dp"
-        android:layout_y="0dp"
         android:background="@color/transparent_white"
         android:clickable="true" />
-
-    <LinearLayout
-        android:layout_width="50dp"
-        android:layout_height="10dp"
-        android:layout_x="190dp"
-        android:layout_y="795dp">
-        <Button
-            android:id="@+id/point1"
-            android:layout_width="10dp"
-            android:layout_height="10dp"
-            android:layout_x="260dp"
-            android:layout_y="780dp"
-            android:background="@drawable/pointer_select"
-            app:backgroundTint="@null" />
-        <Button
-            android:id="@+id/point2"
-            android:layout_width="10dp"
-            android:layout_height="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_x="260dp"
-            android:layout_y="780dp"
-            android:background="@drawable/pointer"
-            app:backgroundTint="@null" />
-
-        <Button
-            android:id="@+id/point3"
-            android:layout_width="10dp"
-            android:layout_height="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_x="260dp"
-            android:layout_y="780dp"
-            android:background="@drawable/pointer"
-            app:backgroundTint="@null" />
-    </LinearLayout>
-</AbsoluteLayout>
+</LinearLayout>

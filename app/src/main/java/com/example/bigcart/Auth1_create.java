@@ -32,7 +32,7 @@ public class Auth1_create extends AppCompatActivity{
     public ImageView backarr;
     public Button signup;
     public TextView log;
-    public TextInputEditText passwordedit, emailedit, phoneedit;
+    public TextInputEditText passwordedit, emailedit;
     public TextInputLayout emailTextInput,passwordTextInputLayout,phoneTextInputLayout;
 
     @SuppressLint("MissingInflatedId")
@@ -48,12 +48,10 @@ public class Auth1_create extends AppCompatActivity{
         });
         emailTextInput = findViewById(R.id.emailTextInput);
         passwordTextInputLayout = findViewById(R.id.passwordTextInputLayout);
-        phoneTextInputLayout=findViewById(R.id.phoneTextInputLayout);
         backarr = findViewById(R.id.backarr);
         signup = findViewById(R.id.signup);
         log = findViewById(R.id.log);
         emailedit = findViewById(R.id.emailedit);
-        phoneedit= findViewById(R.id.phoneedit);
         passwordedit = findViewById(R.id.passwordedit);
         backarr.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -76,7 +74,6 @@ public class Auth1_create extends AppCompatActivity{
     }
     private boolean validateInput() {
         String email = emailedit.getText().toString().trim();
-        String phone = phoneedit.getText().toString().trim();
         String password = passwordedit.getText().toString().trim();
 
         // Email Validation
@@ -88,15 +85,6 @@ public class Auth1_create extends AppCompatActivity{
             return false;
         } else {
             emailTextInput.setError(null);
-        }
-        if (phone.isEmpty()) {
-            phoneTextInputLayout.setError("Phone number is required");
-            return false;
-        } else if (!isValidPhoneNumber(phone)) {
-            phoneTextInputLayout.setError("Invalid phone number");
-            return false;
-        } else {
-            phoneTextInputLayout.setError(null);
         }
         if (password.isEmpty()) {
             passwordTextInputLayout.setError("Password is required");
@@ -113,10 +101,6 @@ public class Auth1_create extends AppCompatActivity{
     private boolean isValidEmail(String email) {
         String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
         return email.matches(emailPattern);
-    }
-    private boolean isValidPhoneNumber(String phone) {
-        String phonePattern = "^\\+?[0-9]{10,13}$";
-        return phone.matches(phonePattern);
     }
     public void signupUser(String email,String password){
         SupabaseClient supabaseClient = new SupabaseClient();

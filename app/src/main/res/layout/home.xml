@@ -1,52 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
+    android:orientation="vertical"
     android:background="@color/light_grey">
-    <ImageView
-        android:id="@+id/banner1"
-        android:layout_width="349dp"
-        android:layout_height="255dp"
-        android:layout_x="36dp"
-        android:layout_y="75dp"
-        android:src="@drawable/news"/>
-    <TextView
-        android:layout_width="147dp"
-        android:layout_height="wrap_content"
-        android:layout_x="85dp"
-        android:layout_y="214dp"
-        android:text="20% off on your first purchase"
-        android:textSize="20dp"
-        android:textStyle="bold"/>
     <EditText
         android:id="@+id/search"
         android:layout_width="350dp"
         android:layout_height="40dp"
-        android:layout_x="35dp"
-        android:layout_y="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center"
         android:background="@drawable/edit"
         android:drawableLeft="@drawable/search"
         android:drawableRight="@drawable/filter"
         android:hint=" Search keywords..."
         android:inputType="text" />
-    <TextView
+    <LinearLayout
+        android:id="@+id/banner1"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_x="34dp"
-        android:layout_y="348dp"
-        android:text="Categories"
-        android:textSize="20dp"
-        android:textStyle="bold" />
-    <ImageView
-        android:id="@+id/nextarr"
-        android:layout_width="wrap_content"
+        android:background="@drawable/news">
+        <TextView
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="40dp"
+            android:layout_width="147dp"
+            android:layout_height="wrap_content"
+            android:text="20% off on your first purchase"
+            android:textSize="20dp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_x="364dp"
-        android:layout_y="353dp"
-        android:src="@drawable/nextarr" />
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Categories"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+        <ImageView
+            android:layout_marginLeft="250dp"
+            android:id="@+id/nextarr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/nextarr" />
+    </LinearLayout>
+
         <HorizontalScrollView
             android:layout_width="match_parent"
             android:layout_height="100dp"
@@ -180,19 +188,14 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/prodrecv"
-        android:layout_width="390dp"
-        android:layout_height="320dp"
-        android:layout_x="10dp"
-        android:layout_y="490dp"/>
-
+        android:layout_width="match_parent"
+        android:layout_height="300dp"/>
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_x="0dp"
-        android:layout_y="812dp"
         android:background="@color/white"
         app:itemTextColor="@color/bottom_nav_color"
         app:menu="@menu/bottom_navigation_menu"
         app:labelVisibilityMode="labeled"/>
-</AbsoluteLayout>
+</LinearLayout>
