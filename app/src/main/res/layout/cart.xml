@@ -37,7 +37,7 @@
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:layout_x="0dp"
-        android:layout_y="692dp"
+        android:layout_y="500dp"
         android:background="@drawable/whiterec"
         app:backgroundTint="@null" />
 
@@ -45,7 +45,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_x="20dp"
-        android:layout_y="710dp"
+        android:layout_y="520dp"
         android:text="Subtotal"
         android:textColor="@color/grey"
         android:textSize="15dp"/>
@@ -53,7 +53,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_x="20dp"
-        android:layout_y="740dp"
+        android:layout_y="550dp"
         android:text="Shipping charges"
         android:textColor="@color/grey"
         android:textSize="15dp"/>
@@ -63,7 +63,7 @@
         android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_x="350dp"
-        android:layout_y="710dp"
+        android:layout_y="520dp"
         android:hint="$"
         android:gravity="right"
         android:textSize="15dp"/>
@@ -72,7 +72,7 @@
         android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_x="350dp"
-        android:layout_y="740dp"
+        android:layout_y="550dp"
         android:hint="$"
         android:textSize="15dp"
         android:gravity="right"/>
@@ -81,7 +81,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_x="20dp"
-        android:layout_y="770dp"
+        android:layout_y="580dp"
         android:text="Total"
         android:textSize="20dp"
         android:textStyle="bold" />
@@ -90,17 +90,16 @@
         android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_x="350dp"
-        android:layout_y="770dp"
+        android:layout_y="580dp"
         android:hint="$"
         android:textSize="15dp"
         android:gravity="right"/>
-
     <Button
         android:id="@+id/checkout"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_x="30dp"
-        android:layout_y="830dp"
+        android:layout_y="640dp"
         android:background="@drawable/gradient"
         android:clickable="true"
         android:text="Checkout"
