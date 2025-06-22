@@ -129,7 +129,7 @@
         android:id="@+id/saveset"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="400dp"
+        android:layout_marginTop="250dp"
         android:background="@drawable/gradient"
         android:clickable="true"
         android:text="Save settings"

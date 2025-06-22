@@ -21,7 +21,7 @@
     <LinearLayout
         android:id="@+id/banner1"
         android:layout_gravity="center"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/news">
@@ -39,7 +39,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="10dp"
+
         android:layout_marginLeft="20dp">
         <TextView
             android:layout_width="wrap_content"
@@ -185,11 +185,10 @@
             </LinearLayout>
         </LinearLayout>
     </HorizontalScrollView>
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/prodrecv"
         android:layout_width="match_parent"
-        android:layout_height="300dp"/>
+        android:layout_height="250dp"/>
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
