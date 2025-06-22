@@ -17,13 +17,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="40dp"
             android:clickable="true"
             android:src="@drawable/backarrblack" />
         <TextView
             android:layout_width="360dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="40dp"
             android:gravity="center"
             android:text="My account"
             android:textColor="@color/black"

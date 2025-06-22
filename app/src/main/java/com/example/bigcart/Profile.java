@@ -29,7 +29,7 @@ import java.io.IOException;
 public class Profile extends AppCompatActivity{
     public BottomNavigationView bottomNavigationView;
     public TextView aboutme, orders, address, creditcards, transaction, notif, signout, fullname;
-    public ImageView photo, pict;
+    public ImageView photo, pict, backarr;
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +42,7 @@ public class Profile extends AppCompatActivity{
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        backarr = findViewById(R.id.backarr);
         fullname = findViewById(R.id.fullname);
         aboutme = findViewById(R.id.aboutme);
         orders = findViewById(R.id.orders);
@@ -52,6 +53,12 @@ public class Profile extends AppCompatActivity{
         signout = findViewById(R.id.signout);
         photo = findViewById(R.id.photo);
         pict = findViewById(R.id.pict);
+        backarr.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
         signout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
