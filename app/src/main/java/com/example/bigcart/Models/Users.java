@@ -1,6 +1,6 @@
 package com.example.bigcart.Models;
 
-public class Profile {
+public class Users {
 
         private String id;
         private String full_name;

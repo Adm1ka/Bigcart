@@ -12,6 +12,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import android.content.Intent;
 import android.provider.MediaStore;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -19,8 +20,13 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.bigcart.Models.AuthResponse;
+import com.example.bigcart.Models.LoginRequest;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
+import com.google.gson.Gson;
+
+import java.io.IOException;
 
 public class Auth1_create extends AppCompatActivity{
     public ImageView backarr;
@@ -61,7 +67,9 @@ public class Auth1_create extends AppCompatActivity{
             @Override
             public void onClick(View v) {
                 if (validateInput()) {
-                    signupUser();
+                    String email = emailedit.getText().toString().trim();
+                    String password = passwordedit.getText().toString();
+                    signupUser(email, password);
                 }
             }
         });
@@ -110,8 +118,29 @@ public class Auth1_create extends AppCompatActivity{
         String phonePattern = "^\\+?[0-9]{10,13}$";
         return phone.matches(phonePattern);
     }
-    private void signupUser() {
-        Toast.makeText(this, "Signup Successful!", Toast.LENGTH_SHORT).show();
+    public void signupUser(String email,String password){
+        SupabaseClient supabaseClient = new SupabaseClient();
+        LoginRequest loginRequest = new LoginRequest(email,password);
+        supabaseClient.registerUser(loginRequest, new SupabaseClient.SBC_Callback() {
+            @Override
+            public void onFailure(IOException e) {
+                runOnUiThread(() -> {
+                    Log.e("signupUser:onFailure", e.getLocalizedMessage());
+                });
+            }
+            @Override
+            public void onResponse(String responseBody) {
+                runOnUiThread(() -> {
+                    Log.e("signupUser:onResponse", responseBody);
+                    Gson gson = new Gson();
+                    AuthResponse auth=gson.fromJson(responseBody, AuthResponse.class);
+                    DataBinding.saveBearerToken("Bearer "+auth.getAccess_token());
+                    DataBinding.saveUuidUser(auth.getUser().getId());
+                    startActivity(new Intent(getApplicationContext(), Home.class));
+                    Log.e("signupUser:onResponse", auth.getUser().getId());
+                });
+            }
+        });
     }
 }
 

@@ -21,7 +21,7 @@
         android:layout_height="100dp"
         android:layout_x="155dp"
         android:layout_y="50dp"
-        android:src="@drawable/usergrey" />
+        android:src="@drawable/usergrey"/>
 
     <ImageView
         android:id="@+id/photo"
@@ -40,15 +40,6 @@
         android:layout_y="160dp"
         android:hint="Name Surname"
         android:textSize="20dp" />
-
-    <TextView
-        android:id="@+id/emailadd"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_x="160dp"
-        android:layout_y="185dp"
-        android:hint="Email Address"
-        android:textSize="15dp" />
 
     <LinearLayout
         android:layout_width="410dp"
